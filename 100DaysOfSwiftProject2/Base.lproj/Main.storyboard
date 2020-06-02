@@ -25,6 +25,9 @@
                                             <constraint firstAttribute="height" constant="100" id="MHz-zn-nb3"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="estonia"/>
+                                        <connections>
+                                            <action selector="buttonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r5t-Jn-BQW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHq-F7-YYB">
                                         <rect key="frame" x="107" y="130" width="200" height="100"/>
@@ -33,6 +36,9 @@
                                             <constraint firstAttribute="height" constant="100" id="tlM-Xl-9Jm"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="france"/>
+                                        <connections>
+                                            <action selector="buttonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIR-gc-bdm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bM-8Q-c0D">
                                         <rect key="frame" x="107" y="260" width="200" height="100"/>
@@ -41,6 +47,9 @@
                                             <constraint firstAttribute="width" constant="200" id="JG5-be-OLI"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="italy"/>
+                                        <connections>
+                                            <action selector="buttonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u3F-IF-9pi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -55,6 +64,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Xp-xB-zKk"/>
+                    <connections>
+                        <outlet property="button1" destination="38G-r7-czg" id="81g-nK-aM9"/>
+                        <outlet property="button2" destination="UHq-F7-YYB" id="0lR-ad-1YU"/>
+                        <outlet property="button3" destination="6bM-8Q-c0D" id="z06-1A-tMO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
