@@ -37,6 +37,18 @@ class ViewController: UIViewController {
             button.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor
         }
     }
+    
+    func  askQuestion(action: UIAlertAction! = nil) {
+        
+        countries.shuffle()
+        
+        correctAnswer = Int.random(in: 0...2)
+        
+        for (index, button) in buttons.enumerated(){
+            button.setImage(UIImage(named: countries[index]), for: .normal)
+        }
+        title = countries[correctAnswer].uppercased()
+        
     }
     
 
