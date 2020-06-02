@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     var score = 0
     var countries = [String]()
     var buttons = [UIButton]()
-
+    var counter = 0
     override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     func  askQuestion(action: UIAlertAction! = nil) {
-        
+        navigationItem.prompt = "Score: \(score)"
         countries.shuffle()
         
         correctAnswer = Int.random(in: 0...2)
@@ -55,20 +55,28 @@ class ViewController: UIViewController {
         var title: String
         var massege: String
         
+        counter += 1
         if sender.tag == correctAnswer {
             title = "Correct"
-            massege = "You are smart, take pirozhok \r"
+            massege = "You are smart, take pirozhok"
             score += 1
         } else {
             title = "Wrong"
-            massege = "That’s the flag of \(countries[sender.tag].capitalized)\r"
+            massege = "That’s the flag of \(countries[sender.tag].capitalized)"
             score -= 1
         }
-        let ac = UIAlertController(title: title, message: massege + "Your score is \(score)", preferredStyle: .alert)
+        if counter == 10 {
+            title = "Your score is \(score)"
+            massege = "Game Over"
+            score = 0
+            counter = 0
+        }
+        let ac = UIAlertController(title: title, message: massege, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        
-        present(ac, animated: true)
 
+        navigationItem.prompt = "Score: \(score)"
+        present(ac, animated: true)
+        
     }    
         
 
