@@ -22,9 +22,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+            
+       buttons = [button1, button2, button3]
+        setUpButtonBorders()
+        
+        countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
+        askQuestion()
+        
     }
-    @IBAction func buttonTaped(_ sender: UIButton) {
+    
+    func setUpButtonBorders() {
+        for button in buttons {
+            button.layer.borderWidth = 1
+            button.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor
+        }
+    }
     }
     
 
