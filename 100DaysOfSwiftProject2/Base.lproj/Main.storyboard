@@ -29,7 +29,7 @@
                                             <action selector="buttonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r5t-Jn-BQW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHq-F7-YYB">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHq-F7-YYB">
                                         <rect key="frame" x="107" y="130" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="4Yz-of-FZd"/>
@@ -40,7 +40,7 @@
                                             <action selector="buttonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIR-gc-bdm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bM-8Q-c0D">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bM-8Q-c0D">
                                         <rect key="frame" x="107" y="260" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="2Yu-kI-WI7"/>
