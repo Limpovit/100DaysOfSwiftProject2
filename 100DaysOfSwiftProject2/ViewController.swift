@@ -28,7 +28,13 @@ class ViewController: UIViewController {
         
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         askQuestion()
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .done, target: self, action: #selector(showScore))
+    }
+    
+    @objc func showScore() {
+        let ac = UIAlertController(title: "", message: "Your score is \(score)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Continue", style: .default ))
+        present(ac, animated: true)
     }
     
     func setUpButtonBorders() {
@@ -38,8 +44,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func  askQuestion(action: UIAlertAction! = nil) {
-        navigationItem.prompt = "Score: \(score)"
+    func  askQuestion(action: UIAlertAction! = nil) {        
         countries.shuffle()
         
         correctAnswer = Int.random(in: 0...2)
@@ -74,7 +79,6 @@ class ViewController: UIViewController {
         let ac = UIAlertController(title: title, message: massege, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
 
-        navigationItem.prompt = "Score: \(score)"
         present(ac, animated: true)
         
     }    
